@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="greet.css">
+    <title>Greeting</title>
+</head>
+<body>
+    <div class="container">
+    <form class="forms">
+        <span class="theCount">0</span>
+        <h1>Greetings</h1>  
+        <div class="forName">
+            <input type="text" class="theName" placeholder="Enter a Name"> 
+        </div>
+        <div class="langu">
+            <h4>Choose a language</h4>
+            <label for="language" class="isLangu">
+            <input type="radio" id="language" class="radioBtn" name="radios" value="Isixhosa">
+                IsiXhosa
+            </label>
+            <label for="language2" class="isLangu">
+            <input type="radio" id="language2" class="radioBtn" name="radios" value="English">
+                English
+            </label>
+            <label for="language3" class="isLangu">
+            <input type="radio" id="language3" class="radioBtn" name="radios" value="Pedi">
+                Pedi
+            </label>
+        </div>
+        <div class="btns">
+            <button type="button" class="greetBtn" name="button">Greet</button>
+            <button type="button" class="resetBtn" name="button">Reset</button>
+        </div>
+        <div class="theMessage">
+            Your message will show here!
+            <!-- <input type="text" name="message" class="message" id="msg" placeholder="greeting message"> -->
+        </div>
+    </form>
+</div>
+    <script src="js/FactoryFuncGreet.js" charset="utf-8"></script>
+    <script src="js/greet.js" charset="utf-8"></script>
+</body>
+</html>

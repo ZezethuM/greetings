@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body{
+    font-family: 'Playfair Display', serif;
+}
+.forms{
+    width: 300px;
+    height: 60vh;
+    border: 1px solid black;
+    margin-top: 10px;
+    background-color: #ACECF7
+}
+.forms h1{
+    text-align: center;
+}
+.name{
+    height: 30px;
+    width: 200px;
+}
+.forName{
+    padding: 20px 0 10px 20px;
+}
+.langu{
+    padding: 10px 0 20px 20px;
+    flex-direction: row;
+}
+h4{
+    text-align: left;
+    padding-bottom: 10px;
+}
+.isLangu{
+    padding-right: 10px;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    width: 100%;
+    height: 12vh;
+}
+.greetBtn{
+    width: 100px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #1A1423;
+    box-shadow: inset 0 0 0 0 #FEFCAD;
+    transition: ease-in-out 0.3s;
+    font-size: 1.2rem;
+    justify-content: space-around;
+}
+.greetBtn:hover{
+    box-shadow: inset 200px 0 0 0 #FEFCAD;
+    cursor: pointer;
+    color: black;
+}
+.resetBtn{
+    width: 100px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #1A1423;
+    box-shadow: inset 0 0 0 0 #FEFCAD;
+    transition: ease-in-out 0.3s;
+    font-size: 1.2rem;
+    justify-content: space-around;
+}
+.resetBtn:hover{
+    box-shadow: inset 200px 0 0 0 #FEFCAD;
+    cursor: pointer;
+    color: black;
+}
+
+.theMessage{
+   text-align: center;
+   background-color: white;
+   height: 10vh;
+   width: 200px;
+}
+.img{
+    width: 280px;
+    height: 15vh;
+    margin: 0;
+}
+h1{
+    font: sans-seri;
+    font-style: oblique;
+}
+.theCount{
+    float: right;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color:navy;
+    margin-top: 0;
+
+}
+.theName{
+    text-align: center;
+    width: 260px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 700px){
+
+    body{
+       
+    }
+    .container{
+        height: 100vh;
+        width: 100%;
+    }
+    .forms{
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .theName{
+        text-align: center;
+        width: 370px;
+        height:50px;
+        font-size: 20px;
+        
+    }
+    h4{
+        font-size: 30px;
+    }
+
+    .theMessage{
+        /* padding-top: 50px; */
+        text-align: center;
+        font-size: 30px;
+        margin-top: 50px;
+        height: 17vh;
+        width: 300px;
+     }   
+     .resetBtn{
+        width: 150px;
+        height: 12vh;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: #1A1423;
+        box-shadow: inset 0 0 0 0 #FEFCAD;
+        transition: ease-in-out 0.2s;
+        font-size: 1.5rem;
+        justify-content: space-around;
+    }
+    .resetBtn:hover{
+        box-shadow: inset 200px 0 0 0 #FEFCAD;
+        cursor: pointer;
+        color: black;
+    } 
+    .greetBtn{
+        width: 150px;
+        height: 12vh;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: #1A1423;
+        box-shadow: inset 0 0 0 0 #FEFCAD;
+        transition: ease-in-out 0.3s;
+        font-size: 1.5rem;
+        justify-content: space-around;
+    }
+    .greetBtn:hover{
+        box-shadow: inset 200px 0 0 0 #FEFCAD;
+        cursor: pointer;
+        color: black;
+    }
+    .forName{
+        padding: 20px 0 20px 20px;
+    }
+    .isLangu{
+        padding-right: 10px;
+        padding-bottom: 20px;
+        font-size: 27px;
+    }
+    .langu{
+        padding: 20px 0 20px 20px;
+    }
+}
+    
