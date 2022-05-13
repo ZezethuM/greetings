@@ -3,10 +3,12 @@ function greeting(list) {
     let theName = list || [];
 
     function setName(name) {
-        theName.push(name);
+
+            theName.push(name);  
     }
     function greetMassage(langu, name) {
         let newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    
         if(newName === ""){
             return "Enter a Name"
         }
@@ -32,8 +34,8 @@ function greeting(list) {
         return theName;
     }
     function resetCount() {
-        theName = 0;
-        return theName;
+        theName = [];
+        return theName.length;
     }
     return {
         setName,

@@ -6,13 +6,14 @@
 }
 body{
     font-family: 'Playfair Display', serif;
+    background-color: #84e7f8;
 }
 .forms{
-    width: 300px;
-    height: 60vh;
-    border: 1px solid black;
-    margin-top: 10px;
-    background-color: #ACECF7
+    width: 600px;
+    height: 90vh;
+    margin-top: 30px;
+    background-color: #ACECF7;
+    
 }
 .forms h1{
     text-align: center;
@@ -29,23 +30,25 @@ body{
     flex-direction: row;
 }
 h4{
-    text-align: left;
-    padding-bottom: 10px;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
 }
 .isLangu{
-    padding-right: 10px;
+    padding-right: 40px;
+    margin-left: 70px;
+   
 }
 .btns{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     text-align: center;
-    padding: 10px 0 20px 0;
-    width: 100%;
+    padding: 10px 0 50px 0;
     height: 12vh;
 }
 .greetBtn{
-    width: 100px;
+    width: 200px;
+    height: 9vh;
     outline: none;
     border: none;
     color: white;
@@ -53,7 +56,7 @@ h4{
     box-shadow: inset 0 0 0 0 #FEFCAD;
     transition: ease-in-out 0.3s;
     font-size: 1.2rem;
-    justify-content: space-around;
+    
 }
 .greetBtn:hover{
     box-shadow: inset 200px 0 0 0 #FEFCAD;
@@ -61,15 +64,16 @@ h4{
     color: black;
 }
 .resetBtn{
-    width: 100px;
+    width: 200px;
+    height: 9vh;
     outline: none;
     border: none;
     color: white;
+    font-size: 20px;
     background-color: #1A1423;
     box-shadow: inset 0 0 0 0 #FEFCAD;
     transition: ease-in-out 0.3s;
     font-size: 1.2rem;
-    justify-content: space-around;
 }
 .resetBtn:hover{
     box-shadow: inset 200px 0 0 0 #FEFCAD;
@@ -78,40 +82,54 @@ h4{
 }
 
 .theMessage{
+    font-size: 20px;
    text-align: center;
    background-color: white;
-   height: 10vh;
-   width: 200px;
-}
-.img{
-    width: 280px;
-    height: 15vh;
-    margin: 0;
+   height: 15vh;
+   width: 300px;
+   padding-top: 30px;
+   margin-top: 30px;
 }
 h1{
     font: sans-seri;
-    font-style: oblique;
+    font-style:normal;
+    font-size: 50px;
+    font-weight: 300;
+    padding-top: 50px;
 }
 .theCount{
     float: right;
     background-color: white;
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 50px;
     text-align: center;
-    color:navy;
+    color:black;
     margin-top: 0;
+    padding-top: 10px;
+    font-size: 20px;
 
 }
 .theName{
     text-align: center;
-    width: 260px;
-    height: 30px;
+    width: 400px;
+    height: 50px;
+    margin-left: 80px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+label{
+    font-size: 20px;
+    font-weight: 700;
+}
+.count{
+    float: right;
+    padding-right: 20px;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 480px){
 
     body{
-       
+       width: 100%;
     }
     .container{
         height: 100vh;
@@ -119,7 +137,7 @@ h1{
     }
     .forms{
         margin-top: 0;
-        height: 100%;
+        /* height: 100%; */
         width: 100%;
     }
     h1{
@@ -127,17 +145,16 @@ h1{
     }
     .theName{
         text-align: center;
-        width: 370px;
-        height:50px;
+        width: 300px;
+        height: 70px;
         font-size: 20px;
-        
+        margin-left: 10px;
     }
     h4{
         font-size: 30px;
     }
 
     .theMessage{
-        /* padding-top: 50px; */
         text-align: center;
         font-size: 30px;
         margin-top: 50px;
@@ -180,14 +197,21 @@ h1{
     }
     .forName{
         padding: 20px 0 20px 20px;
+        width: 350px;
     }
     .isLangu{
         padding-right: 10px;
         padding-bottom: 20px;
-        font-size: 27px;
+        font-size: 20px;
+        margin-left: 10px;
     }
     .langu{
         padding: 20px 0 20px 20px;
+        width: 100%;
     }
+    .theCount{
+        font-size: 20px;
+    }
+
 }
     
