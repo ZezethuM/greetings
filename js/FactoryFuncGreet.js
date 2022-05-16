@@ -1,16 +1,17 @@
 function greeting(list) {
 
     let theName = list || [];
+    let regexo = /^[a-zA-Z]{3,}$/g
 
     function setName(name) {
-
             theName.push(name);  
     }
     function greetMassage(langu, name) {
-        let newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+
+        let newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase().trim();
     
-        if(newName === ""){
-            return "Enter a Name"
+        if(newName === "" || !regexo.test(newName)){
+            return "Enter a valid Name"
         }
         if (theName.includes(newName)) {
                 return "Already greeted enter a new Name";
@@ -34,8 +35,10 @@ function greeting(list) {
         return theName;
     }
     function resetCount() {
-        theName = [];
-        return theName.length;
+        while(theName.length != 0){
+            theName.pop();
+        }
+        return theName;
     }
     return {
         setName,

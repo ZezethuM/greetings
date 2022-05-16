@@ -4,12 +4,32 @@ const resetBtn = document.querySelector(".resetBtn");
 const greetElement = document.querySelector(".theMessage");
 const countElement = document.querySelector(".theCount");
 const countReset = document.querySelector('.countReset');
+let spanO = document.querySelector('.spano');
 
 
 let storedNames = localStorage.getItem("MyArray") ? JSON.parse(localStorage.getItem("MyArray")) : [];
 
 const theGreet = greeting(storedNames);
 countElement.innerHTML = storedNames.length;
+
+myName.onkeyup = function(){
+    const regex = /^[a-zA-Z]{3,}$/g;
+
+    if(regex.test(myName.value)){
+        spanO.innerText = "You entered a valid name";
+        spanO.style.color = 'green';
+        setTimeout(() => {
+            spanO.innerHTML = "";
+        }, 7000);
+    }
+    else{
+        spanO.innerText = "You entered an invalid name";
+        spanO.style.color = 'red'; 
+        setTimeout(() => {
+            spanO.innerHTML = "";
+        }, 7000);
+    }
+}
 
 myGreetBtn.addEventListener('click', function(){
     
@@ -22,7 +42,7 @@ myGreetBtn.addEventListener('click', function(){
         let newMessage = theGreet.greetMassage(checkedRadio, myName.value);
         localStorage.setItem("MyArray", JSON.stringify(storedNames));
         
-        if(newMessage === "Enter a Name"){
+        if(newMessage === "Enter a valid Name"){
             greetElement.style.color = "red"
             greetElement.innerHTML = newMessage;
         } else {
@@ -52,7 +72,7 @@ resetBtn.addEventListener('click', function(){
     countReset.innerHTML = "Your counter will reset in 4 seconds"
     setTimeout(()=> {
         localStorage.clear()
-        countElement.innerHTML = theGreet.resetCount();
+        countElement.innerHTML = theGreet.resetCount().value = 0;
         countReset.innerHTML = "";
     }, 4000);
     

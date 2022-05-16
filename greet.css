@@ -25,6 +25,10 @@ body{
 .forName{
     padding: 20px 0 10px 20px;
 }
+.spano{
+    margin-left: 100px;
+   
+}
 .langu{
     padding: 10px 0 20px 20px;
     flex-direction: row;
