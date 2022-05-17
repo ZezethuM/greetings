@@ -30,7 +30,6 @@ myName.onkeyup = function(){
         }, 7000);
     }
 }
-
 myGreetBtn.addEventListener('click', function(){
     
     let thecurrentLanguage = document.querySelector(".radioBtn:checked");
