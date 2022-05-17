@@ -42,10 +42,15 @@ myGreetBtn.addEventListener('click', function(){
         let newMessage = theGreet.greetMassage(checkedRadio, myName.value);
         localStorage.setItem("MyArray", JSON.stringify(storedNames));
         
-        if(newMessage === "Enter a valid Name"){
+        if(newMessage === "Please Enter a valid Name"){
             greetElement.style.color = "red"
             greetElement.innerHTML = newMessage;
-        } else {
+        } 
+        else if(newMessage === "Already greeted enter a new Name"){
+            greetElement.style.color = "red";
+            greetElement.innerHTML = newMessage;
+        }
+        else {
             greetElement.style.color = "green"
             countElement.innerHTML = storedNames.length;
         }
@@ -55,10 +60,17 @@ myGreetBtn.addEventListener('click', function(){
             greetElement.innerHTML = "Your message will show here!";
         }, 5000);
 
-    } else {
+    } else if(thecurrentLanguage === null && myName.value === "") {
             greetElement.style.color = "red";
+            greetElement.innerHTML = "Please select language and enter name";
+        setTimeout(() => {
+            greetElement.style.color = "black"
+            greetElement.innerHTML = "Your message will show here!";
+        }, 5000);
+    }
+    else {
+        greetElement.style.color = "red";
             greetElement.innerHTML = "Language not selected";
-
         setTimeout(() => {
             greetElement.style.color = "black"
             greetElement.innerHTML = "Your message will show here!";

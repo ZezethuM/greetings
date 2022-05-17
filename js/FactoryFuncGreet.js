@@ -1,44 +1,49 @@
 function greeting(list) {
 
-    let theName = list || [];
-    let regexo = /^[a-zA-Z]{3,}$/g
+    let theNames = list || [];
+    let regexo = /^[a-zA-Z]{3,}$/
 
     function setName(name) {
-            theName.push(name);  
+            if(theNames.includes(name)){
+            }
+            else{theNames.push(name)};  
     }
     function greetMassage(langu, name) {
 
         let newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase().trim();
-    
+        
         if(newName === "" || !regexo.test(newName)){
-            return "Enter a valid Name"
+            return "Please Enter a valid Name"
         }
-        if (theName.includes(newName)) {
-                return "Already greeted enter a new Name";
+        else if(langu === "" && newName === ""){
+            return "Please select language and enter Name"
+        }
+        if (theNames.includes(newName)) {
+            return "Already greeted enter a new Name";
         } else {
             setName(newName);
-            if (langu === "Isixhosa") {
-                return "Molo, " + newName
-            }
-            else if (langu === "English") {
-                return "Hello, " + newName;
-            }
-            else if (langu === "Pedi") {
-                return "Dumela, " + newName;
-            }
+                if (langu === "Isixhosa") {
+                    return "Molo, " + newName
+                }
+                else if (langu === "English") {
+                    return "Hello, " + newName;
+                }
+                else if (langu === "Pedi") {
+                    return "Dumela, " + newName;
+                }
         }
     }
     function counter() {
-        return theName.length;
+        return theNames.length;
     }
     function getNames() {
-        return theName;
+        return theNames;
     }
     function resetCount() {
-        while(theName.length != 0){
-            theName.pop();
+        while(theNames.length != 0){
+            theNames.pop();
         }
-        return theName;
+        return theNames;
     }
     return {
         setName,
