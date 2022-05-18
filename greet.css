@@ -26,7 +26,7 @@ body{
     max-width: 100%;
 }
 .spano{
-    margin-left: 100px;
+    margin-left: 40px;
    
 }
 .langu{
@@ -217,6 +217,12 @@ label{
     .theCount{
         font-size: 30px;
         height: 70px;
+    }
+    .spano{
+        font-size: 20px;
+    }
+    .count{
+        font-size: 20px;
     }
 
 }
